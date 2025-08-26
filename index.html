@@ -65,19 +65,3 @@
     </div>
     <script>
         const video = document.getElementById('story-video');
-        const message = document.getElementById('message');
-        const whatsappMessage = document.getElementById('whatsapp-message');
-        const storyContainer = document.querySelector('.story-container');
-
-        // Quando o vídeo acabar
-        video.onended = function() {
-            // Esconde o vídeo e a mensagem "Assista até o fim!"
-            video.style.display = 'none';
-            message.style.display = 'none';
-            
-            // Exibe a mensagem do WhatsApp após o vídeo terminar
-            whatsappMessage.style.display = 'block';
-        };
-    </script>
-</body>
-</html>
