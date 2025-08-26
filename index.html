@@ -60,15 +60,21 @@
             <source src="video.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
-        <div class="message">Assista até o fim! 👀</div>
+        <div class="message" id="message">Assista até o fim! 👀</div>
         <div class="whatsapp-message" id="whatsapp-message">Isso é só uma prévia bb, olha lá no WhatsApp que tem mais</div>
     </div>
     <script>
         const video = document.getElementById('story-video');
+        const message = document.getElementById('message');
         const whatsappMessage = document.getElementById('whatsapp-message');
+        const storyContainer = document.querySelector('.story-container');
 
         // Quando o vídeo acabar
         video.onended = function() {
+            // Esconde o vídeo e a mensagem "Assista até o fim!"
+            video.style.display = 'none';
+            message.style.display = 'none';
+            
             // Exibe a mensagem do WhatsApp após o vídeo terminar
             whatsappMessage.style.display = 'block';
         };
